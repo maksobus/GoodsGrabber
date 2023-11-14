@@ -1,0 +1,70 @@
+//import { sendBot } from "/sendbot.js";
+var alinks = [];
+
+chrome.runtime.onMessage
+    .addListener((message,sender,sendResponse) => {
+		if(typeof message=="object"){addGoodsToContainer(message);}
+		if(typeof message=="string"){}
+        sendResponse("OK");
+    });
+
+
+function addGoodsToContainer(urls) {
+    if (!urls || !urls.length) {
+        return;
+    }
+    const container = document.querySelector(".container");
+    addGoodsNode(container, urls);
+	alinks.push(urls);
+}
+
+
+function addGoodsNode(container, url) {
+	price = url[1]/100;
+	div = document.createElement('div');
+	imgtg = document.createElement('img');
+	imgdel = document.createElement('img');
+	imgadd = document.createElement('img');
+	div.innerHTML=url[0].replaceAll('src="//','src="https://').replace('href="//','href=https://');
+	div.className = "card";
+	imgtg.src="images/tg48.png";
+	imgadd.src="images/add.png";
+	imgdel.src="images/delete.png";
+	imgtg.title="Send to bot";
+	imgadd.title="Check price";
+	imgdel.title="Delete on search";
+	imgtg.className = "tgbot";
+	imgadd.className = "badd";
+	imgdel.className = "bdelete";
+	imgtg.setAttribute('price', price);
+	imgadd.setAttribute('did',url[2]);
+	imgdel.setAttribute('did',url[2]);
+	imgtg.addEventListener("click", function() {sendBot(this);});
+	imgdel.addEventListener("click", function() {motloh(this);});
+	div.appendChild(imgtg);
+	div.appendChild(imgadd);
+	div.appendChild(imgdel);
+	container.appendChild(div);
+
+}
+
+
+function motloh(o) {
+	parent = o.parentElement;
+	if(localStorage.getItem('motloh')) {
+		motloh = localStorage.getItem('motloh').split(',');
+		}
+	else
+	{var motloh = [];}
+	motloh.push(o.getAttribute('did'));
+	localStorage.setItem('motloh', motloh.join());
+	parent.remove();
+}
+
+
+
+
+
+
+
+

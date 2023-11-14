@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Goods Grabber",
+  "version": "2.0",
+  "description": "Goods grabber from AliExpress",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "permissions": ["sidePanel", "tabs", "scripting", "activeTab"],
+  "host_permissions": [
+        "https://www.aliexpress.com/*", "https://script.google.com/*", "https://t.me/*", "https://script.googleusercontent.com/*"
+    ],
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}

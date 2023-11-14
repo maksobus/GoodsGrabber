@@ -1,0 +1,44 @@
+body {
+    text-align:left;
+}
+
+button {
+    width:100%;
+    color:white;
+    background:linear-gradient(#de1d30, #f5828d);
+    border-width:0;
+    border-radius:20px;
+    padding:5px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+
+.frame {
+	position: absolute;
+	width:95%;
+	height:80%;
+	border-width:0;
+}
+
+.info_red {
+	text-align: center;
+	color: red;
+}
+
+.info_green {
+	text-align: center;
+	color: green;
+}
+
+input[type="number"] {
+  width: 5em;
+}
+
+input[type="text"] {
+  width: 5em;
+}
+
+input[type="password"] {
+  width: 5em;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-UA">
+  <head>
+    <title>Goods Grabber</title>
+        <link rel="stylesheet" type="text/css" href="sidepanel.css"/>
+		<meta charset="utf-8">
+  </head>
+  <body>
+  
+  <details>
+<summary>Налаштування:</summary><br>
+    	<input type="number" id="maxprice" name="maxprice" value="500" min="0.01" max="9999"><span>  Максимальна ціна, грн</span><br><br>
+		<input type="number" id="quantity" name="quantity" value="10" min="1" max="600"><span>  Кількість ітерацій прокрутки сторінки</span><br><br>
+		<input type="number" id="delay" name="delay" value="2" min="1" max="30"><span>  Затримка між ітераціями, сек</span><br><br>
+		  <details>
+<summary>Налаштування бота:</summary>
+		<input type="password" id="chat_id" name="chat_id"><span>  Вкажіть chat_id, на який боту відправляти повідомлення</span><br><br>
+		Приєднатися до <a href="https://t.me/goodsgrabber_bot" target="_blank">GoodsGrabber</a>
+</details>
+</details>
+		<br><br>
+		<div id="info_red" class = "info_red"></div>
+		<div id="info_green" class = "info_green"></div>
+		<button id="newpage" style="display: none;">Відкрити список у новій вкладці</button>
+		<br>
+        <button id="grabBtn">GRAB NOW</button>
+		<br><br>
+		<iframe class="frame" id="frame" src="pageifr.html"></iframe>
+	<script src="sidepanel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    margin:0;
+    padding:0;
+    background-color: #ffffff;
+}
+
+.header {    
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    position: fixed;
+    padding:10px;
+    background: linear-gradient( #de1d30, #f5828d);
+    z-index:100;
+    box-shadow: 0 5px 5px #00222266;
+}
+
+.header > span {
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px #000000ff;
+    font-size: 24px;
+}
+
+.header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header > div > span {
+    font-weight: bold;
+    color: #ffffff;
+    font-size:16px;
+    text-shadow: 3px 3px 3px #00000088;
+}
+
+
+.header input {
+    width:20px;
+    height:20px;
+}
+
+
+.info {
+	padding-top: 55px;
+}
+
+.card {
+	padding: 10px;
+	width:224px;
+    height:390px;
+	position:relative;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 90px;
+}
+
+.tgbot {
+	position: absolute;
+	left: 230px; 
+	top: 20px;
+    z-index: 10;
+	cursor: copy;
+	width:24px;
+    height:24px;
+}
+
+
+.badd{
+	position: absolute;
+	left: 230px; 
+	top: 60px;
+   z-index: 10;
+	cursor: copy;
+	width:24px;
+   height:24px;
+	display: none;
+}
+
+
+.bdelete{
+	position: absolute;
+	left: 230px; 
+	top: 60px;
+   z-index: 10;
+	cursor: copy;
+	width:24px;
+   height:24px;
+}
